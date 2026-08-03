@@ -2,6 +2,7 @@
 <html lang="fr">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,79 +12,166 @@
 
 </head>
 
+
 <body>
+
 
 <div class="world">
 
+
 <div class="card">
+
+
+<!-- ÉTAPE 1 : QUESTION -->
+
+<div id="question">
+
 
 <h1>🌸 Une petite quête t'attend...</h1>
 
+
 <p>
-J'aimerais te proposer une aventure à deux.
+
+J'aimerais te proposer une petite aventure à deux.
+
 <br><br>
+
 Est-ce que tu accepterais de venir en date avec moi ? ❤️
+
 </p>
 
 
 <div class="buttons">
 
+
 <button id="yes">
 🥰 Oui, avec plaisir
 </button>
+
 
 <button id="no">
 😵 Non
 </button>
 
+
 </div>
 
 
-<div id="choices" class="hidden">
+</div>
 
-<h2>Choisis notre aventure 🌸</h2>
 
-<button onclick="chooseDate('🎬 Cinéma')">
+
+
+<!-- ÉTAPE 2 : CHOIX ACTIVITÉ -->
+
+
+<div id="activite" class="hidden">
+
+
+<h1>✨ Super !</h1>
+
+
+<p>
+
+J'ai une idée pour notre petit moment ensemble...
+
+<br><br>
+
+Qu'est-ce qui te ferait le plus plaisir ?
+
+</p>
+
+
+<button onclick="chooseActivity('🎬 Aller au cinéma')">
+
 🎬 Aller au cinéma
+
 </button>
 
-<button onclick="chooseDate('🍹 Boire un verre')">
+
+<button onclick="chooseActivity('🍹 Aller boire un verre')">
+
 🍹 Aller boire un verre
+
 </button>
+
 
 </div>
 
 
-<div id="calendar" class="hidden">
 
-<h2>Quelle date te conviendrait ? 📅</h2>
+
+
+<!-- ÉTAPE 3 : DATE -->
+
+
+<div id="dateChoice" class="hidden">
+
+
+<h1>📅 Dernière étape</h1>
+
+
+<p>
+
+Choisis la date qui te conviendrait le mieux ❤️
+
+</p>
+
 
 <input type="date" id="date">
 
+
+<br>
+
+
 <button id="send">
-Envoyer ❤️
+
+Envoyer ma réponse ❤️
+
 </button>
 
+
 </div>
+
+
+
+
+
+
+<!-- MESSAGE FINAL -->
 
 
 <div id="result" class="hidden">
 
-<h2>🎉 Quête acceptée !</h2>
+
+<h1>🎉 Quête acceptée !</h1>
+
 
 <p>
+
 Merci d'avoir accepté cette aventure ❤️
+
+<br><br>
+
+J'ai hâte de partager ce moment avec toi 🌸
+
 </p>
 
+
+</div>
+
+
+
+
 </div>
 
 
 </div>
 
-</div>
 
 
 <script src="script.js"></script>
+
 
 </body>
 
