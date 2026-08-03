@@ -1,10 +1,10 @@
-let activite = "";
+let activiteChoisie = "";
 
-const boutonNon = document.getElementById("no");
 const boutonOui = document.getElementById("yes");
+const boutonNon = document.getElementById("no");
 
 
-// Le bouton Non s'échappe 😵
+// Bouton NON qui s'échappe 😵
 
 function fuir(){
 
@@ -20,41 +20,70 @@ function fuir(){
 
 }
 
+
 boutonNon.addEventListener("mouseover", fuir);
+
 boutonNon.addEventListener("click", fuir);
 
 
-// Le bouton Oui ouvre les choix
+
+
+// Quand on clique sur OUI 🥰
 
 boutonOui.addEventListener("click", function(){
 
-    document.getElementById("choices").classList.remove("hidden");
+
+    document.getElementById("question")
+    .classList.add("hidden");
+
+
+    document.getElementById("activite")
+    .classList.remove("hidden");
+
 
 });
 
 
-// Choix de l'activité
 
-function chooseDate(choix){
 
-    activite = choix;
 
-    document.getElementById("calendar")
+
+// Choix cinéma ou verre 🍿🍹
+
+function chooseActivity(choix){
+
+
+    activiteChoisie = choix;
+
+
+    document.getElementById("activite")
+    .classList.add("hidden");
+
+
+    document.getElementById("dateChoice")
     .classList.remove("hidden");
+
 
 }
 
 
-// Envoi de la réponse
+
+
+
+
+// Envoi de la réponse par mail 💌
 
 document.getElementById("send")
 .addEventListener("click", function(){
+
 
     const date =
     document.getElementById("date").value;
 
 
+
     if(date === ""){
+
 
         alert("Choisis une date ❤️");
 
@@ -63,18 +92,36 @@ document.getElementById("send")
     }
 
 
-    /*
-    Ici on ajoutera l'envoi par mail
-    avec EmailJS quand ton site sera prêt.
-    */
+
+    const message = 
+`Bonjour ❤️
+
+J'accepte le rendez-vous !
+
+Mon choix :
+${activiteChoisie}
+
+La date choisie :
+${date}
+
+À bientôt 🌸`;
 
 
-    document.getElementById("calendar")
+
+    const email = "TON-ADRESSE-MAIL@exemple.com";
+
+
+
+    window.location.href =
+    `mailto:${email}?subject=Notre date ❤️&body=${encodeURIComponent(message)}`;
+
+
+
+    document.getElementById("dateChoice")
     .classList.add("hidden");
 
 
     document.getElementById("result")
     .classList.remove("hidden");
-
 
 });
