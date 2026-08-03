@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Une petite quête ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="world">
+
+<div class="card">
+
+<h1>🌸 Une petite quête t'attend...</h1>
+
+<p>
+J'aimerais te proposer une aventure à deux.
+<br><br>
+Est-ce que tu accepterais de venir en date avec moi ? ❤️
+</p>
+
+
+<div class="buttons">
+
+<button id="yes">
+🥰 Oui, avec plaisir
+</button>
+
+<button id="no">
+😵 Non
+</button>
+
+</div>
+
+
+<div id="choices" class="hidden">
+
+<h2>Choisis notre aventure 🌸</h2>
+
+<button onclick="chooseDate('🎬 Cinéma')">
+🎬 Aller au cinéma
+</button>
+
+<button onclick="chooseDate('🍹 Boire un verre')">
+🍹 Aller boire un verre
+</button>
+
+</div>
+
+
+<div id="calendar" class="hidden">
+
+<h2>Quelle date te conviendrait ? 📅</h2>
+
+<input type="date" id="date">
+
+<button id="send">
+Envoyer ❤️
+</button>
+
+</div>
+
+
+<div id="result" class="hidden">
+
+<h2>🎉 Quête acceptée !</h2>
+
+<p>
+Merci d'avoir accepté cette aventure ❤️
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
