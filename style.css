@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+
 *{
     margin:0;
     padding:0;
@@ -13,94 +16,122 @@ body{
     justify-content:center;
     align-items:center;
 
-    font-family: "Trebuchet MS", Arial, sans-serif;
 
-    background:
+    font-family:'Silkscreen', cursive;
 
-    linear-gradient(
-        rgba(180,230,255,0.35),
-        rgba(170,220,140,0.45)
-    ),
 
-    url("https://i.imgur.com/7QFZJ4Y.png");
+    background-image:
+    url("biome-cerisier.jpg");
+
 
     background-size:cover;
+
     background-position:center;
 
-    overflow:hidden;
+    background-attachment:fixed;
+
+
+    image-rendering:pixelated;
 
 }
 
 
 
-/* Conteneur principal */
+/* Conteneur du monde */
 
 .world{
 
     width:100%;
+
     height:100vh;
 
+
     display:flex;
+
     justify-content:center;
+
     align-items:center;
+
+
+    padding:20px;
 
 }
 
 
 
-/* Panneau Minecraft */
+/* Panneau en bois de cerisier Minecraft */
+
 
 .card{
 
     width:90%;
-    max-width:620px;
 
-    padding:45px 35px;
+    max-width:650px;
+
+
+    padding:40px;
+
 
     text-align:center;
-
-    color:white;
 
 
     background:
 
-    #c99568;
+    #d99bb8;
 
 
-    border:8px solid #704421;
+    border:8px solid #9e587b;
 
 
     box-shadow:
 
-    inset 0 0 0 4px #e8bd8c,
+    inset 0 0 0 5px #f2c4d6,
 
-    0 15px 35px rgba(0,0,0,0.45);
+    0 12px 0 #704052,
+
+    0 25px 40px rgba(0,0,0,0.5);
+
 
 
     image-rendering:pixelated;
 
 
-    animation:apparition 0.8s ease;
+    animation:apparition 0.7s ease;
+
 
 }
 
 
 
 
-/* Titres */
+/* Texture légère du bois */
+
+.card::before{
+
+    content:"";
+
+
+    position:absolute;
+
+}
+
+
+
+
 
 h1{
 
-    font-size:36px;
+    color:white;
+
+    font-size:30px;
+
 
     margin-bottom:25px;
-
-    color:#fff2d8;
 
 
     text-shadow:
 
-    3px 3px #704421;
+    3px 3px #6b3c50;
 
 }
 
@@ -108,26 +139,32 @@ h1{
 
 h2{
 
-    margin-bottom:25px;
+    color:white;
+
+    margin-bottom:20px;
 
     text-shadow:
 
-    2px 2px #704421;
+    2px 2px #6b3c50;
 
 }
-
 
 
 
 p{
 
-    font-size:19px;
+    color:white;
 
-    line-height:1.7;
+
+    font-size:17px;
+
+
+    line-height:1.8;
+
 
     text-shadow:
 
-    1px 1px #704421;
+    2px 2px #6b3c50;
 
 }
 
@@ -135,39 +172,43 @@ p{
 
 
 
-/* Boutons style Minecraft */
+/* Boutons Minecraft */
 
 
 button{
 
+
+    font-family:'Silkscreen', cursive;
+
+
     margin:12px;
 
-    padding:15px 25px;
+
+    padding:15px 22px;
 
 
-    font-size:17px;
+    font-size:15px;
+
 
     color:white;
 
 
-    background:#75a94b;
+    background:#7dbb52;
 
 
-    border:4px solid #3f6425;
+    border:5px solid #3d7025;
 
 
     box-shadow:
 
-    0 5px 0 #3f6425;
+    0 6px 0 #31551c;
 
 
     cursor:pointer;
 
 
-    transition:0.2s;
+    transition:0.15s;
 
-
-    font-weight:bold;
 
 }
 
@@ -176,9 +217,12 @@ button{
 
 button:hover{
 
+
     transform:translateY(-4px);
 
-    filter:brightness(1.1);
+
+    filter:brightness(1.15);
+
 
 }
 
@@ -187,11 +231,14 @@ button:hover{
 
 button:active{
 
-    transform:translateY(2px);
+
+    transform:translateY(5px);
+
 
     box-shadow:
 
-    0 2px 0 #3f6425;
+    0 1px 0 #31551c;
+
 
 }
 
@@ -199,19 +246,20 @@ button:active{
 
 
 
-/* Bouton NON */
+/* Bouton Non */
 
 #no{
 
     background:#8b8b8b;
 
-    border-color:#4d4d4d;
+    border-color:#555;
 
     box-shadow:
 
-    0 5px 0 #4d4d4d;
+    0 6px 0 #333;
 
 }
+
 
 
 
@@ -221,26 +269,28 @@ button:active{
 
 input{
 
-    margin:20px;
+
+    font-family:'Silkscreen', cursive;
+
 
     padding:12px;
 
 
-    font-size:17px;
+    margin:20px;
 
 
-    border:4px solid #704421;
+    background:#fff4fa;
 
 
-    background:#fff5df;
+    border:5px solid #9e587b;
+
+
+    font-size:15px;
 
 }
 
 
 
-
-
-/* Cacher les étapes */
 
 
 .hidden{
@@ -253,9 +303,6 @@ input{
 
 
 
-/* Apparition douce */
-
-
 @keyframes apparition{
 
 
@@ -263,9 +310,10 @@ from{
 
     opacity:0;
 
-    transform:scale(0.85);
+    transform:scale(0.8);
 
 }
+
 
 
 to{
